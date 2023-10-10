@@ -12,7 +12,7 @@ html {
 body {
   position: relative;
   min-height: 100dvb;
-  margin: 10px auto;
+  margin: 0;
   font-family: 'Spot Mono', sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -36,7 +36,6 @@ a:focus-visible {
 
 h2 {
   font-size: 22px;
-  line-height: 1.6em;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -50,7 +49,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1280px;
+  max-width: 1680px;
   margin: auto;
   padding: 40px;
 }
@@ -67,6 +66,11 @@ p {
   width: 112px;
   height: 40px;
   color: var(--main-color)
+}
+
+nav {
+  display: flex;
+  gap: 20px;
 }
 
 .nav__item {
@@ -110,12 +114,21 @@ p {
   scale: 1.8;
 }
 
+.main-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;  
+  gap: 20px;
+  max-width: 1680px;
+  margin: auto;
+  padding: 50px 50px 150px;
+}
+
 main {
   display: flex;
-  align-items: center;
-  max-width: 1280px;
-  margin: auto;
-  padding: 250px 50px;
+  align-items: flex-start;
+  flex-basis: 85%;
+  gap: 50px;
 }
 
 .about {
@@ -176,24 +189,31 @@ input.done {
 
 #puzzle-wrapper {
   flex-basis: 50%;
-  margin-right: 3%;
   padding: 20px;
   background-color: #000;
 }
 
 #puzzle {
-  min-width: 600px;
+  min-width: 550px;
 }
 
 #puzzle-clues {
   flex-basis: 50%;
-  padding-left: 40px;
+}
+
+#puzzle-clues ol {
+  margin-block-start: 0;
+  margin-block-end: 40px;
 }
 
 #puzzle-clues ol li {
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 17px;
   cursor: pointer;
+}
 
+#puzzle-clues ol li + li {
+  margin-block-start: 5px;
 }
 
 #puzzle-clues ol li::marker {
@@ -219,10 +239,7 @@ input.done {
 }
 
 .years {
-  position: absolute;
-  inset-block-start: 230px;
-  inset-inline-start: 20px;
-  width: clamp(150px, 15%, 250px);
+  flex-basis: clamp(100px, 12%, 230px);
   z-index: -1;
 }
 
@@ -250,7 +267,7 @@ input.done {
 
 .ufo {
   position: absolute;
-  inset-block-end: 15px;
+  inset-block-end: 0;
   inset-inline-end: 15%;
   width: clamp(300px, 25%, 420px);
   z-index: -1;
