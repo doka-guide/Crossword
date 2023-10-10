@@ -239,7 +239,8 @@ input.done {
 }
 
 .years {
-  flex-basis: clamp(100px, 12%, 230px);
+  flex-basis: 12%;
+  max-width: 200px;
   z-index: -1;
 }
 
@@ -281,13 +282,43 @@ input.done {
 }
 
 @media (width < 1200px) {
-  main {
+  .colorpicker {
+    inset: initial;
+    inset-block-start: 120px;
+    inset-inline-start: 47px;    
+  }
+
+  .colors {
     flex-direction: column;
+  }
+
+  .main-wrapper, main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-wrapper {
+    padding-block-end: 250px;
+  }
+
+  .years {
+    max-width: 150px;
   }
 }
 
 @media (width < 600px) {
+  .main-wrapper {
+    padding-block-start: 10px;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+  }
+
+  main {
+    width: 100%;
+  }
+
   #puzzle-wrapper {
+    width: 100%;
     overflow-x: scroll;
   }
 }
