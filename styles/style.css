@@ -281,6 +281,43 @@ input.done {
   mix-blend-mode: difference;
 }
 
+.content h2 {
+  margin-block-end: 40px;
+}
+
+.content p {
+  padding-inline-start: 40px;
+}
+
+.share {
+  margin-block-start: 40px;
+}
+
+.socials {
+  display: inline-flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.socials li {
+  padding: 5px;
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  clip-path: inset(50%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
 @media (width < 1200px) {
   .colorpicker {
     inset: initial;
