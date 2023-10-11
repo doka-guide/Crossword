@@ -79,6 +79,11 @@ nav {
   mix-blend-mode: difference;
 }
 
+.nav__item:not(:last-child)::after {
+  content: "◦";
+  margin-left: 20px;
+}
+
 .colorpicker {
   position: absolute;
   inset: 50%;
@@ -165,10 +170,6 @@ td input {
   background-color: transparent;
 }
 
-td input:focus {
-
-}
-
 td span {
   position: absolute;
   top: 1px;
@@ -229,6 +230,8 @@ input.done {
 }
 
 .icon {
+  position: relative;
+  z-index: -1;
   animation: flow 3s ease-in-out alternate-reverse infinite;
 }
 
@@ -241,7 +244,6 @@ input.done {
 .years {
   flex-basis: 12%;
   max-width: 200px;
-  z-index: -1;
 }
 
 .hmm {
@@ -250,7 +252,6 @@ input.done {
   inset-inline-start: 0;
   width: clamp(300px, 23%, 400px);
   animation: none;
-  z-index: -1;
 }
 
 .hmm-2 {
@@ -262,7 +263,6 @@ input.done {
   inset-block-start: 0;
   inset-inline-end: 35px;
   width: clamp(155px, 15%, 255px);
-  z-index: -1;
   animation-delay: 0.2s;
 }
 
@@ -271,7 +271,6 @@ input.done {
   inset-block-end: 0;
   inset-inline-end: 15%;
   width: clamp(300px, 25%, 420px);
-  z-index: -1;
   animation-delay: 0.3s;
 }
 
