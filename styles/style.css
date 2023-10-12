@@ -48,7 +48,7 @@ p {
 }
 
 p + p {
-  margin-bottom: 10px;
+  margin-block-start: 10px;
 }
 
 .header {
@@ -291,7 +291,7 @@ input.done {
 }
 
 .content {
-  max-width: 400px;
+  max-width: 550px;
   margin: auto;
   mix-blend-mode: difference;
 }
@@ -351,6 +351,7 @@ input.done {
 
   .main-wrapper, main {
     flex-direction: column;
+    align-items: center;
   }
 
   .main-wrapper {
@@ -359,6 +360,7 @@ input.done {
   }
 
   .years {
+    align-self: flex-start;
     max-width: 150px;
   }
 
