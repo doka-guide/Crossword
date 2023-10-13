@@ -77,7 +77,10 @@
 								break;
 						}
 						
-						if ( e.keyCode === 9) {
+						if (
+                            e.keyCode >= 9 &&
+                            e.keyCode < 32
+                        ) {
 							return false;
 						} else if (
 							e.keyCode === 37 ||
